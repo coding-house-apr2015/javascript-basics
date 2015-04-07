@@ -22,3 +22,15 @@
 // console.log('The result of a', o, 'b is', result);
 
 // problem 2 : feature
+
+var input = prompt("Please enter at least two numbers, separated by ':'");
+input = input.split(':');
+input = input.map(function(n) { return parseFloat(n); });
+var sum = 0, product = 0;
+for (var i = 0; i < input.length; i++) {
+  sum += input[i];
+  product *= input[i];
+}
+var avg = sum / input.length;
+var stddev = Math.sqrt(avg);
+console.log('Sum:', sum, 'Product', product, 'Avg:', avg, 'Stddev:', stddev);
