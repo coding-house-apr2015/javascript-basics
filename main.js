@@ -1,23 +1,21 @@
-var a = prompt('give me a num?');
-a = parseInt(a);
-var b = prompt('give me a another num?');
-b = parseInt(b);
-var c = Math.pow(a,b);
-console.log('a', a, 'b', b, 'c', c);
-
-var a = prompt('give me a num?');
-a = parseInt(a);
-var b = prompt('give me a another num?');
-b = parseInt(b);
-var c = prompt("give me an operator; +, -, *, /");
-if (c == "+"){
- console.log(a+b)}
-else if (c == "-"){
-  console.log(a-b);
+var a = prompt('Enter the first number.');
+a = parseFloat(a);
+var o = prompt('Enter an arithmetic operator ( + , - , * or / ).');
+var c = prompt('Please enter the second number.');
+c = parseFloat(c);
+var result;
+switch (o) {
+    case '+':
+      result = a + c;
+      break;
+    case '-':
+      result = a - c;
+      break;
+    case '*':
+      result = a * c;
+      break;
+    case '/':
+      result = a / c;
+      break;
 }
-else if (c == "/"){
-  console.log(a/b);
-}
-else {
-  console.log(a*b);
-}
+console.log('The result of a', o, 'b is', result);
