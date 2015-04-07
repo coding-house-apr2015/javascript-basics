@@ -1,24 +1,17 @@
-// problem 1 : feature
-// var a = prompt('Enter the first number.');
-// a = parseFloat(a);
-// var o = prompt('Enter an arithmetic operator ( + , - , * or / ).');
-// var c = prompt('Please enter the second number.');
-// c = parseFloat(c);
-// var result;
-// switch (o) {
-//     case '+':
-//       result = a + c;
-//       break;
-//     case '-':
-//       result = a - c;
-//       break;
-//     case '*':
-//       result = a * c;
-//       break;
-//     case '/':
-//       result = a / c;
-//       break;
-// }
-// console.log('The result of a', o, 'b is', result);
+function numberPlay (str) {
 
-// problem 2 : feature
+    var num = inp.split(":");
+    var spex = {};
+
+    spex.sum = (num.map(function(e){return parseInt(e)})).reduce(function(a, b, i, e) {return a + b});
+    spex.products = int.reduce(function(a, b, i, e) {return a * b});
+    spex.avg = sum / int.length;
+    spex.stdDev = Math.sqrt((int.map(function(e){return (e * e) - avg;}).reduce(function(a, b, i, e) {return a + b})) / 2);
+
+
+    return spex;
+
+}
+
+var inp = prompt("Give me a number. (ex: n:n:n )");
+numberPlay(inp);
