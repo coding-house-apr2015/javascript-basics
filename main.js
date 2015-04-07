@@ -1,6 +1,22 @@
-var a = prompt('give me a num?');
+var a = prompt('NUMBER ME!');
+
 a = parseInt(a);
-var b = prompt('give me a another num?');
-b = parseInt(b);
-var c = Math.pow(a,b);
-console.log('a', a, 'b', b, 'c', c);
+
+var operator = prompt('WHAT DO YOU WANNA DO NOW PUNNK?');
+
+var c = prompt('LAST NUMBER NOW SUCKER');
+
+c = parseInt(c);
+
+if(operator==="*"){
+   retVal = a*c;
+} else if(operator==="/"){
+   retVal = a / c;
+}
+if(operator==="+"){
+   retVal = a+c;
+} else if(operator==="-"){
+   retVal = a-c;
+}
+
+console.log(retVal);
