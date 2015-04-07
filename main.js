@@ -1,6 +1,22 @@
 var a = prompt('give me a num?');
-a = parseInt(a);
+a = parseFloat(a);
+var op = prompt('give me an operation');
 var b = prompt('give me a another num?');
-b = parseInt(b);
-var c = Math.pow(a,b);
-console.log('a', a, 'b', b, 'c', c);
+b = parseFloat(b);
+var result;
+if (op ==='+'){
+  result = a + b;
+}
+else if (op === '-'){
+  result = a - b;
+}
+else if (op === '/'){
+  result = a / b;
+}
+else if (op === '*'){
+  result = a * b;
+}
+else {
+  console.log('Cannot understand your operation');
+}
+console.log('The result of A & B is = ' + result);
