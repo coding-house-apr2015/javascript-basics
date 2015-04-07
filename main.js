@@ -18,9 +18,8 @@ else if (op==="+") {
   }
 else if (op==="-") {
     ans = n1-n2;
-  }
-// else if {
-//   console.log("You've entered values that are not permitted.")
- // else {
-  console.log("the result of", n1, op, n2, "is", ans);
-// }
+} else {
+  console.log("You've entered values that are not permitted.")
+}
+
+console.log("the result of", n1, op, n2, "is", ans);
