@@ -22,3 +22,15 @@
 // console.log('The result of a', o, 'b is', result);
 
 // problem 2 : feature
+
+var raw = prompt('Give me three numbers separated by ':'');
+var raw = "5:6:7"
+var numstr = raw.split(':');
+var numarr = numstr.map(function(num) {
+  return parseFloat(num);
+});
+
+var sum = 0;
+var product = 0;
+var avg = 0;
+var stdev = 0;
