@@ -1,6 +1,32 @@
-var a = prompt('give me a num?');
-a = parseInt(a);
-var b = prompt('give me a another num?');
-b = parseInt(b);
-var c = Math.pow(a,b);
-console.log('a', a, 'b', b, 'c', c);
+// Take user input and split by spaces into array of strings
+var userInput = prompt('Enter a space-separated list, alternating numbers and operators. (+-*/)').split(' ');
+var numbers = [];
+var operators = [];
+var result;
+
+// Split input into separate numbers and operators arrays
+userInput.forEach(function(e,i) {
+  if (i % 2) {
+    operators.push(e);
+  } else {
+    numbers.push(e);
+  }
+});
+
+// Convert number strings into number type
+numbers = numbers.map(parseFloat);
+
+// Set result as first number
+result = numbers.shift();
+
+// Evaluate each operator on result in sequence on each number in sequence
+operators.forEach(function(o){
+  switch(o){
+    case '+': result = result + numbers.shift(); break;
+    case '-': result = result - numbers.shift(); break;
+    case '*': result = result * numbers.shift(); break;
+    case '/': result = result / numbers.shift(); break;
+  }
+});
+
+alert('Result: ' + result);
