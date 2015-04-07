@@ -1,11 +1,11 @@
 // Take user input and split by spaces into array of strings
-var userInput = prompt('Enter a space-separated list, alternating numbers and operators. (+-*/)').split(' ');
+var userInputs = prompt('Enter a space-separated list, alternating numbers and operators. (+-*/)').split(' ');
 var numbers = [];
 var operators = [];
 var result;
 
 // Split input into separate numbers and operators arrays
-userInput.forEach(function(e,i) {
+userInputs.forEach(function(e,i) {
   if (i % 2) {
     operators.push(e);
   } else {
