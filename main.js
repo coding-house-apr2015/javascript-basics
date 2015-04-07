@@ -1,6 +1,10 @@
-var a = prompt('give me a num?');
-a = parseInt(a);
-var b = prompt('give me a another num?');
-b = parseInt(b);
-var c = Math.pow(a,b);
-console.log('a', a, 'b', b, 'c', c);
+var a = parseInt(prompt("gimme an int, dawg: "));
+var b = parseInt(prompt("gimme an another int: "));
+var c = prompt("do what with em? (+, -, *, /)");
+
+if (c === "+" || c === "-"){
+  c === "+" ? alert(a + b) : alert (a - c);
+}
+else if (c === "*" || c === "/") {
+  c === "*" ? alert(a * b) : alert(a / b);
+}
