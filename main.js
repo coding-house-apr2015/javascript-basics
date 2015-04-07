@@ -28,18 +28,24 @@ accepts number as string , each separated by ':'*/
 
 var string = prompt("Enter string of colon separated numbers:");
 var nums = string.split(':');
-var avg = 0;
 
+//avg
+var avg = 0;
 nums = nums.map(function(char){
   avg += parseFloat(char);
   return parseFloat(char);
 });
-
 avg = (avg / nums.length);
 
-nums = nums.map(function(n){
-  return Math.pow((n - avg),2);
-});
+//product
+var product = nums.reduce(function(a,b){return a * b;});
 
-var variance = (nums.reduce(function(a,b){return a + b;}) / nums.length);
-window.alert(Math.sqrt(variance));
+//sum
+var sum = nums.reduce(function(a,b){return a + b;});
+
+//standard dev
+nums = nums.map(function(n){return Math.pow((n - avg),2);});
+var variance = sum / nums.length;
+var stanDev = Math.sqrt(variance);
+
+alert('sum: ' + sum +' product: ' + product + ' average: ' + avg + ' standard dev: ' + stanDev);
