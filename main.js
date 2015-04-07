@@ -12,8 +12,8 @@ var b = prompt('Would you like to add, subtract, multiply, or divide?');
 if (b !== '+' || '-' || '*' || '/') {
   alert("I'm afraid I can't do that Dave");
 }
-var c = prompt('Another number please');
-c = parseInt(c);
+//var c = prompt('Another number please');
+//c = parseInt(c);
 if (b === '*') {
   console.log(a * c);
 }
